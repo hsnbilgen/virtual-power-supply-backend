@@ -1,0 +1,30 @@
+{
+  "name": "virtual-power-supply-backend",
+  "version": "1.0.0",
+  "description": "Simple backend server for energy power supply in the market. That provides APIs for IoT devices to connect and manage",
+  "main": "index.js",
+  "scripts": {
+    "start": "node bin/app",
+    "test": "jest --forceExit --color",
+    "prettier-check": "prettier-check \"app/**/*.js\"",
+    "eslint-check": "eslint --print-config . | eslint-config-prettier-check && eslint --ext .js app/",
+    "fix-lint": "npm run eslint-check -- --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hsnbilgen/virtual-power-supply-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hsnbilgen/virtual-power-supply-backend/issues"
+  },
+  "homepage": "https://github.com/hsnbilgen/virtual-power-supply-backend#readme",
+  "dependencies": {
+    "dotenv-safe": "^8.2.0",
+    "express": "^4.18.1",
+    "swagger-routes-express": "^3.3.1",
+    "yamljs": "^0.3.0"
+  }
+}
