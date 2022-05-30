@@ -2,17 +2,17 @@ const requestConfig = require('../config/request.json');
 
 const prepareRequest = (req, methodName) => {
     let url = {};
-    let siteName = req.params.siteName && req.params.siteName;
+    let siteId = req.params.siteId && req.params.siteId;
 
     switch (methodName) {
         case 'getOutages':
             url = `${requestConfig.host}${requestConfig.basePath}${requestConfig.pathOutages}`;
             break;
         case 'getSiteInfo':
-            url = `${requestConfig.host}${requestConfig.basePath}${requestConfig.pathSiteInfo}`;
+            url = `${requestConfig.host}${requestConfig.basePath}${requestConfig.pathSiteInfo}/${siteId}`;
             break;
         case 'createSiteOutages':
-            url = `${requestConfig.host}${requestConfig.basePath}${requestConfig.pathSiteOutages}/${siteName}`;
+            url = `${requestConfig.host}${requestConfig.basePath}${requestConfig.pathSiteOutages}/${siteId}`;
             break;
         default:
             break;
@@ -24,8 +24,8 @@ const prepareRequest = (req, methodName) => {
 const setResponse = (status, success, data, error) => {
 
     try {
-        if(error) {
-            return  {
+        if (error) {
+            return {
                 status: status,
                 success: success,
                 errors: [{ message: error }]
