@@ -22,7 +22,7 @@ paths:
 
   /site-info/{siteId}:
     get:
-      operationId: getSiteInfoById
+      operationId: getSiteInfo
       summary: Returns information about a specific site.
       description: The site information contains the ID and name of the site. It also contains a list of devices that make up the site.
       parameters:
