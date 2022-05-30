@@ -24,3 +24,7 @@ npm install
 ```
 npm start
 ```
+
+### Import Postman Samples to have requests to query out
+
+Create Site Outage request is the only request that should be used under local-development folder in this collection
