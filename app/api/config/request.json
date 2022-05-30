@@ -1,0 +1,7 @@
+{
+    "host": "https://api.krakenflex.systems",
+    "basePath": "/interview-tests-mock-api/v1",
+    "pathOutages": "/outages",
+    "pathSiteInfo": "/site-info",
+    "pathSiteOutages": "/site-outages"
+}
