@@ -1,5 +1,8 @@
 const { getOutages } = require('../controllers/outages-controller');
+const { getSiteInfo, createSiteOutages } = require('../controllers/site-controller');
 
 module.exports = {
-    getOutages
+    getOutages,
+    getSiteInfo,
+    createSiteOutages
 }
