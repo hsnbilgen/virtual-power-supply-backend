@@ -17,7 +17,7 @@ const prepareRequest = (req, methodName) => {
         default:
             break;
     };
-
+    console.log(url);
     return url;
 }
 

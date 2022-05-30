@@ -1,7 +1,6 @@
 const axios = require('axios');
 
 const APIRequestHandlerPromise = (url, method, bodyString, headersObject) => {
-    console.log(headersObject);
     return new Promise((resolve, reject) => {
         APIRequestHandler({
             url,
@@ -21,8 +20,14 @@ const APIRequestHandler = ({ url, method, body, headers }, callback) => {
     const options = {
         url: url && url,
         method: method && method,
-        headers: {
-            'x-api-key': "EltgJ5G8m44IzwE6UN2Y4B4NjPW77Zk6FJK3lL23"
+        json: true,
+        headers: headers && {
+            'x-api-key': "EltgJ5G8m44IzwE6UN2Y4B4NjPW77Zk6FJK3lL23",
+            'Content-Type': 'application/json',
+            'Content-Lenght': body && Buffer.byteLength(body) || 0
+        } || {
+            'x-api-key': "EltgJ5G8m44IzwE6UN2Y4B4NjPW77Zk6FJK3lL23",
+            'Content-Type': 'application/json'
         },
         data: body && body
     };
@@ -30,7 +35,6 @@ const APIRequestHandler = ({ url, method, body, headers }, callback) => {
 
     axios(options)
         .then((response) => {
-            console.log('axios then response: ', response);
             if (response.status >= 200 && response.status < 400) {
                 callback(response);
             } else {
