@@ -1,0 +1,232 @@
+{
+	"info": {
+		"_postman_id": "bf431fa1-e11d-4e76-b6c9-06cbe80bf1ca",
+		"name": "Interviews",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "krakenFlex",
+			"item": [
+				{
+					"name": "local-development",
+					"item": [
+						{
+							"name": "Get Outages",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "EltgJ5G8m44IzwE6UN2Y4B4NjPW77Zk6FJK3lL23",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "localhost:9000/outages",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"outages"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Site-info",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "EltgJ5G8m44IzwE6UN2Y4B4NjPW77Zk6FJK3lL23",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "localhost:9000/site-info/norwich-pear-tree",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"site-info",
+										"norwich-pear-tree"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Site Outage",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n    {\n        \"id\": \"\",\n        \"name\": \"\",\n        \"begin\": \"\",\n        \"end\": \"\"\n    }\n]"
+								},
+								"url": {
+									"raw": "localhost:9000/site-outages/:siteId",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"site-outages",
+										":siteId"
+									],
+									"variable": [
+										{
+											"key": "siteId",
+											"value": "norwich-pear-tree"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Get Outages",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "EltgJ5G8m44IzwE6UN2Y4B4NjPW77Zk6FJK3lL23",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.krakenflex.systems/interview-tests-mock-api/v1/outages",
+							"protocol": "https",
+							"host": [
+								"api",
+								"krakenflex",
+								"systems"
+							],
+							"path": [
+								"interview-tests-mock-api",
+								"v1",
+								"outages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get SiteInfo",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "EltgJ5G8m44IzwE6UN2Y4B4NjPW77Zk6FJK3lL23",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.krakenflex.systems/interview-tests-mock-api/v1/site-info/kingfisher",
+							"protocol": "https",
+							"host": [
+								"api",
+								"krakenflex",
+								"systems"
+							],
+							"path": [
+								"interview-tests-mock-api",
+								"v1",
+								"site-info",
+								"kingfisher"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get SiteInfo - norwich-pear-tree",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "EltgJ5G8m44IzwE6UN2Y4B4NjPW77Zk6FJK3lL23",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.krakenflex.systems/interview-tests-mock-api/v1/site-info/norwich-pear-tree",
+							"protocol": "https",
+							"host": [
+								"api",
+								"krakenflex",
+								"systems"
+							],
+							"path": [
+								"interview-tests-mock-api",
+								"v1",
+								"site-info",
+								"norwich-pear-tree"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create Outages - norwich-pear-tree",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "EltgJ5G8m44IzwE6UN2Y4B4NjPW77Zk6FJK3lL23",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"id\": \"75e96db4-bba2-4035-8f43-df2cbd3da859\",\n        \"begin\": \"2023-05-11T14:35:15.359Z\",\n        \"end\": \"2023-12-27T11:19:19.393Z\",\n        \"name\": \"Battery 8\"\n    },\n    {\n        \"id\": \"86b5c819-6a6c-4978-8c51-a2d810bb9318\",\n        \"begin\": \"2022-02-16T07:01:50.149Z\",\n        \"end\": \"2022-10-03T07:46:31.410Z\",\n        \"name\": \"Battery 2\"\n    },\n    {\n        \"id\": \"86b5c819-6a6c-4978-8c51-a2d810bb9318\",\n        \"begin\": \"2022-05-09T04:47:25.211Z\",\n        \"end\": \"2022-12-02T18:37:16.039Z\",\n        \"name\": \"Battery 2\"\n    },\n    {\n        \"id\": \"9ed11921-1c5b-40f4-be66-adb4e2f016bd\",\n        \"begin\": \"2022-01-12T08:11:21.333Z\",\n        \"end\": \"2022-12-13T07:20:57.984Z\",\n        \"name\": \"Battery 4\"\n    },\n    {\n        \"id\": \"a79fe094-087b-4b1e-ae20-ac4bf7fa429b\",\n        \"begin\": \"2022-02-23T11:33:58.552Z\",\n        \"end\": \"2022-12-16T00:52:16.126Z\",\n        \"name\": \"Battery 5\"\n    }\n]"
+						},
+						"url": {
+							"raw": "https://api.krakenflex.systems/interview-tests-mock-api/v1/site-outages/norwich-pear-tree",
+							"protocol": "https",
+							"host": [
+								"api",
+								"krakenflex",
+								"systems"
+							],
+							"path": [
+								"interview-tests-mock-api",
+								"v1",
+								"site-outages",
+								"norwich-pear-tree"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
