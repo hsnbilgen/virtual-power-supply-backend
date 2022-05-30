@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const YAML = require('yamljs');
 const { connector, summarise } = require('swagger-routes-express');
-const api = require('./api');
+const api = require('./api/routes');
 const { errorHandler } = require('./api/middleware');
 const { setEnvironment } = require('./api/helpers/utils');
 
