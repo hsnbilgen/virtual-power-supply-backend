@@ -43,7 +43,7 @@ paths:
 
   /site-outages/{siteId}:
     post:
-      operationId: createSiteOutage
+      operationId: createSiteOutages
       summary: Posts outages for a specific site with enhanced information.
       description: The outages posted should contain a device ID, device name, begin time, and end time.
       parameters:
